@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <img :src="this.$props.imageSrc" alt=""/>
+  <div :style="{ backgroundImage: `url(${imageSrc})` }">
   </div>
 </template>
 
@@ -15,10 +14,8 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-  }
-
-  img {
-    width: inherit;
-    height: inherit;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 </style>
